@@ -1,0 +1,297 @@
+/*Selectores con propiedades y sus valores*/
+/*Su sintaxis es muy sencilla:
+  Tipo de selector {
+     propiedad: valor;
+     Propiedad-2: valor;
+
+  } 
+*/
+
+/*fuentes:
+font-family: 'Montserrat', sans-serif;
+font-family: 'Allerta', sans-serif;
+
+los anteriores son los tipos de letra traidos de google-fonts*/
+
+/*
+   *{        //el asterisco (*) es el selector universal
+  width: tamaño;      //ancho
+  height: tamaño;     //alto
+
+  padding: 10px;      //pading general para todos los lados
+  /*los siguientes padding son una propiedad mas especifica
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 13px;
+  padding-bottom: 5px;
+  padding: 10px 13px 5px 15px;    //forma resumida del padding s/manecillas reloj*/
+
+  /*margin: 10px;       //tamaño general para la margen, pero tambien se puede hacer lado por lado como el padding
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 13px;
+  margin-bottom: 5px;
+  //margin: 10px 13px 5px 15px;    //forma resumida del marging s/manecillas reloj
+
+  border: 2px solid red;   //borde
+    } 
+*/
+
+/*Selector de etiqueta*/
+body {  /*Sin el . la propiedad va directa a la etiqueta*/
+  font-family: 'Allerta', sans-serif;  /*utiliza la letra allerta y si no carga una sans-serif. Este tipo de letra se puso en body porque quiero que todo mi sitio la use y despues la modifico segun el selector*/
+  margin: 0;
+}
+
+table {
+  width: 100%; /*ancho de la tabla para que ocupe todo el contenedor*/
+}
+
+th {  /*Cabecera de la tabla*/
+  background: #273b47;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+td {
+  padding: 20px;
+}
+
+table, td, th {
+  border: 1px solid #273b47;
+  border-collapse: collapse;  /*une las lineas de contorno de los elementos*/
+}
+
+input, textarea {
+  outline: 0;  /*Quitarle el resaltado del borde a los input y el textarea del footer*/
+}
+
+input:focus, textarea:focus {
+  background: lightgray;  /*cambiarle el color de fondo cuando haga focus en los input y en el textarea*/
+}
+
+.contenedor {   /*Toma el contenido lo centra y le da un ancho*/
+  width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.background {   /*clase utilitaria siempre va arriba, para index.html y precios.html*/
+  background-image: url('../images/background.png');  /*los dos puntos es para devolvernos la carpeta, es decir, seleccion de la imagen background.png de la carpeta images, desde la carpeta CSS donde estamos programando invie.css por eso nos devolvemos con .. para tomar la ruta*/
+  background-size: cover; /*para que la imagen haga la mejor distribucion en el tamaño disponible*/ 
+}
+
+.button {
+  margin-top: 10px;
+  border-radius: 12px;  /*Borde redondeado*/
+  border: none;         /*none: para que no tenga borde*/
+  color: white;         /*Color de la letra*/
+  padding: 7px 12px;    /*Margen interior*/ 
+  cursor: pointer;      /*para que el cursor se vuelva una mano cuando nos ponemos sobre el boton*/
+  text-decoration: none;  /*quitarle el decorado al texto del boton*/
+  font-size: 18px;      /*tamaño*/
+  background: #fd324e;  /*Color del background*/
+  background: linear-gradient(to left, #fe344e, #ff7250);  /*linear-gradient[para el degradado](to left [desde la derecha hacia la izquiera, desde este color, hasta otro color])*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+50,ea2803+51,ff6600+75,c72200+100;Red+Gloss */
+  /*background: rgb(243,197,189); /* Old browsers */
+  /*background: -moz-linear-gradient(top,  rgba(243,197,189,1) 0%, rgba(232,108,87,1) 50%, rgba(234,40,3,1) 51%, rgba(255,102,0,1) 75%, rgba(199,34,0,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
+  background: linear-gradient(to bottom,  rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200',GradientType=0 ); */
+}
+
+.volver {
+  float: right;
+  float: top;
+  margin-right: 290px;
+}
+
+/*Selector de clase*/
+.titulo {             /*Tamaño del titulo cuya class="titulo" "Guitarras Invisibles"*/
+  font-family: 'Montserrat', sans-serif; /*utiliza la letra Monserrat y si no carga una sans-serif*/
+  font-size: 70px;
+  margin-bottom: 0px;
+  margin-top: 70px;
+}
+
+.titulo span {
+  text-decoration: underline;
+}
+
+.title-a {            /*Tamaño del titulo cuya class="title-a" "se la estrella...ser"*/  
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+.title-b {            /*Tamaño del titulo con class=""title-b "Invie Clasica e Invie Acustica"*/
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.guitarras {          /*color para los textos que hay en la seccion cuya class="guitarras" esta propiedad asignada al padre la hereda el hijo*/
+  color: #1F313C;
+}
+
+.guitarras h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+}
+
+.portada {        /*asignacion de background (fondo) a la class="portada"*/
+  color: white;   /*Asignacion del color white a todas las letras de la seccion con class="portada"*/
+  padding: 20px;
+  height: 500px;  /*tamaño de alto a portada*/
+}
+
+.portada button {      /*Button no tiene clase, pero esta dentro de portada, por eso se hace asi el selector .portada button*/
+  margin-bottom: 70px;
+}
+
+.menu {         /*tamaño la fuente del Menu  Home, Guitarras y Precios*/
+  font-size: 24px;
+  display: inline-block;  /*para que el display tome el contenido que tiene el elemento*/
+  position: absolute;  /*para ubicacion con respecto a la pos. del padre*/
+  right: 0;
+}
+
+.menu li {       /*para modificar lo li del menu*/
+  display: inline-block;    /*list-item, es el display que trae por defecto el menu; */
+  margin-left: 30px;
+}
+
+.menu li:before {  /*invocar el Seudoelemento. Las viñetas del menu*/
+                   /*.menu li:before; es a donde se va a aplicar y despues de los : es en donde va */
+  content: '∘';    /* va el pseudoelemento dentro de las ''. Entidades html (assets) (caracteres asignados a cada teclado) https://dev.w3.org/html5/html-author/charref*/
+  font-size: 30px;
+  line-height: 20px;
+  color: white;
+}
+
+.menu a {  /*para el menu*/
+  color: white;  /*color de la letra del menu*/
+  text-decoration: none;  /*quitarle el decorado al texto del menu*/
+}
+
+.logotipo {
+ display: inline-block; 
+ margin-left: 0;
+}
+
+.guitarra {
+  margin: 10px 10px 40px 10px;
+  padding: 10px;
+/*  overflow: hidden;   */    /*propiedad para que no haya desborde de tamaño de la imagen con respecto al texto al hacerle el float y el cuadro del article va a estar sobre puesto*/
+  border: 1px solid #1F313C;    /*borde de 1px, solido y color*/
+  border-radius: 8px;
+}
+
+.guitarra ol {
+  padding: 0;
+}
+
+.guitarra.b {     /*selector sin espacios, para poner un estilo a un elemento que tiene dos clases*/
+  height: 190px;
+}
+
+.derecha {       /*propiedades directamente alicadas (NO img)*/
+  float: right;   /*propiedad que se puede right o left*/
+  position: relative;   /*position de selector*/
+  top: -127px;    /*Seria igual a button:127px;*/
+}
+
+.izquierda {
+  float: left;
+  position: relative;
+}
+
+.contenedor-guitarra-a {
+  margin-left: 20px;
+  padding-left: 20px
+}
+
+.contenedor-guitarra-b {  /*para mover al contenedor de la guitarra clasic*/
+  margin-left: 370px;
+  position: relative;
+  bottom: 90px;
+}
+
+.header {
+  position: relative;  /*le damos esta posicion para que la posicion absoluta del menu se ubique con esta referencia ya que header es el padre de menu*/
+}
+
+.footer {
+  background: #273b47;  /*fondo de color azul en el pie de pagina*/
+  margin-top: 100px;
+}
+
+.footer .contenedor { /*selector de clase .clase1 .clase2*/ 
+  display: flex;      /*aplica el flex al padre, para que lo tomen los hijos inmediatamente inferiores o siguientes*/
+  justify-content: space-between;
+} 
+
+.contacto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  flex-wrap: wrap;
+  /*border: solid green;*/
+  padding: 60px 10px;
+}
+
+.contacto img {       /*dandole propiedad a la img dentro de contacto */
+  display: block;     /*Para que la img ocupe todo el ancho del bloque*/
+}
+
+.contacto strong {
+  display: block;
+}
+
+.contacto a {         /*Dandole propiedades a la etiqueta ancla*/
+  color: white;       /*Color blanco*/
+  text-decoration: none;  /*Quitandole la decoracion al texto (tipo link que por defecto trae la dcoracion de underline)*/
+  margin: 10px 10px 10px 0;
+}
+
+.formulario {
+  display: flex;
+  color: white;
+/*  border: solid red;*/
+  width: 450px;
+  padding: 50px 10px;  /*pone tamañao de padding a superiores y laterales*/
+}
+
+.formcol1, .formcol2 { /*para darle propiedaddes a varias clases a la vez sepera con ,*/
+  display: flex;
+  flex-wrap: wrap;  
+  margin: 0 30px 0 0;
+}
+
+.formcol1 {
+  margin-right: 15px;
+}
+
+.formcol2 {
+  align-items: flex-start;
+}
+
+.formcol2 .button {
+  margin-top: 15px;
+}
+
+.intereses label {
+  font-size: 12px;
+}
+
+.formulario label, .sexo, .intereses { /*para darle propiedaddes a varias clases a la vez sepera con ,*/
+  margin-bottom: 10px;
+}
+
+.sexo {
+  margin-top: 10px;
+}
+
+.tabla {
+  margin: 50px 0;
+}

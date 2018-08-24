@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Invie - tus mejores guitarras!!</title>
+    <meta charset="utf-8"/> <!--metadatos para soporte de tildes y eñes, etc-->
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/invie.css"/>  <!-- CSS/invie.css ruta del archivo de estilos -->
+  </head>
+  <body>
+    <section id="portada" class="portada background"> <!-- portada con la clase portada esta contiene la imagen de fondo -->
+      <header id="header" class="header contenedor"> <!-- header: con dos clases llamadas header y contenedor, separadas por espacio  -->
+        <figure class="logotipo"> <!-- logotipo -->
+          <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/> <!-- src="ruta donde esta la imagen {(ruta absoluta: path completo donde esta la img. ej. www.facebook.com/images/logo.png) o (ruta relativa: desde donde esta la imagen desde nuestro proyecto)}" alt="El texto alterno por si la imagen no carga" -->
+        </figure>
+        <nav class="menu"> <!-- menu -->
+          <ul> <!-- unordenal list -->
+            <li> <!-- list item -->
+              <a href="index.html">Home</a> <!--a: anchor (ancla) para enlaces, para definir a dónde va el enlace. Esto también recibe rutas relativas y absolutas-->
+            </li>
+            <li>
+              <a href="#guitarras">Guitarras</a>  <!--en el href, el # es el link para llevarnos a la seccion con id guitarras. Ruta relativa-->
+            </li>
+            <li>
+              <a href="precios.html">Precios</a> <!-- este enlace nos lleva a el nuevo doc .html llamado precios.   ej. precios.html el atributo target="_blank" hable la pagina en una nueva pestaña-->
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="contenedor">  <!--etiqueta DIV no añade vr semantico a nuestro proyecto. Se utiliza para efectos visuales (sirve como una caja) -->
+        <h1 class="titulo">Guitarras <span>invie</span>sibles</h1><!-- titulo. con la etiqueta span podemos decorar invie -->
+        <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3><!-- resumen -->
+        <a class="button" href="#guitarras">Conoce más</a><!-- <button class="button">Conoce más</button>boton. Pero lo reemplazamos por una etiqueta tipo ancla para llevar a un enlace para que conoxcan mas -->
+      </div>
+    </section>
+    <section id="guitarras" class="guitarras contenedor"> <!-- guitarras: con dos clases llamadas guitarras y contenedor, separadas por espacio -->
+      <h2>Nuestra guitarras</h2><!-- titulo -->
+      <article class="guitarra"> <!-- guitarra 1 -->
+        <img class="derecha" src="images/invie-acustica.png" alt="Guitarra Invie Acustica" width="350"/> <!-- para mantener la relacion de alto y ancho de la imagen real, no se pone el alto -->
+        <div class="contenedor-guitarra-a">          
+          <h3 class="title-b">Invie Acustica</h3>
+          <ol> <!-- ordenal list -->
+            <li>Estilo vintage</li>
+            <li>Madera pura</li>
+            <li>Incluye estuche invisible de aluminio</li>
+          </ol>
+        </div>
+      </article>
+      <article class="guitarra b"> <!-- guitarra 2. para darle una clase aparte debe tener la anterior clase mas b. Es decir hay un elemento con dos clases (guitarra y b) -->
+        <img class="izquierda" src="images/invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
+        <div class="contenedor-guitarra-b">
+          <h3 class="title-b">Invie Classic</h3>
+          <ol>
+            <li>Estilo vintage</li>
+            <li>Liviana</li>
+            <li>Inicia tu camino como Rockstar</li>
+          </ol>
+        </div>
+      </article>
+    </section>
+    <div class="volver">  
+        <a class="button" href="#">Volver</a>
+      </div>
+    <footer class="footer">
+      <!-- footer (pie de pagina) tiene dos div porque tiene dos columnas -->
+      <div class="contenedor">
+        <div class="contacto">
+          <img src="images/invie-white.png" alt="logotipo blanco"/> <!-- src="donde esta la imagen  (ruta desde donde esta nuestro proyecto)" alt="El texto alterno por si la imagen no carga" -->
+          <a href="tel: +573186009379"><strong>Telefono</strong><span> 3186009379</span></a> <!-- <a> <a/> etiqueta ancla con href y el vr tel: se le da permiso al soft de llamadas... llamar al numero que ponemos al darle click. Con la etiqueta <strong> damos un bold a el titulo "Telefono" y con la etiqueta <span> para darle otro tipo de diseño -->
+          <a href="mailto: contacto@inviee.com"><strong>E-mail</strong><span> contacto@inviee.com</span></a>  <!-- Pasa lo mismo que la etiqueta ancla <a> anterior de telefono pero activa el cliente de correo con mailto -->
+        </div>
+        <form class="formulario">  <!-- <form> etiqueta especial para formulario con class para diñero en css-->
+          <div class="formcol1">            
+            <label for="nombre">Nombre</label>
+              <input type="text" required id="nombre" name="nombre" /> <!-- Atributos de etiq input: Type ( tipo texto, email, etc); required (para asegurar que halla texto segun el tipo); placeholder (placeholder="pon tu nombre": para texto de fondo o difuminado dentro de la caja de txt); value (la caja de txt con valores por defecto); id (para enlazar con el atributo for de label y al dar click en nombre me ponga focus en su respectiva caja de txt).-->
+            <label for="email">E-mail</label>
+              <input type="email" required id="email" name="email" /> <!-- Type (ej. email); required (para asegurar que halla texto@dominio.com por ser tipo email); id (para el focus en la txtbox).-->
+            <div class="sexo"> <!-- para el diseño-->
+              <label for="mujer">
+                <input type="radio" checked id="mujer" name="sexo" value="mujer">mujer <!-- type="radio" (ej. rara seleccion unica); id (para enlazar el click sobre el label for="mujer" con el input y poner el focus en la txtbox); name (para identificar que campo de formulario se envia al backend y con que valor); value (para que el valor enviado al Backend sea mujer).-->
+              </label>
+              <label for="hombre">
+                <input type="radio" id="hombre" name="sexo" value="hombre">hombre <!-- name (con el anterior se envia hombre o mujer segun seleccion); value (para que el valor enviado al Backend sea hombre).--> 
+              </label>
+            </div>
+            <div class="intereses">
+              <label for="cotizacion">
+                <input type="checkbox" id="cotizacion" name="intereses" checked value="cotizacion"> Cotización <!--value (Vr enviado al Backend sea cotizacion...).--> 
+              </label>
+              <label for="reclamos">
+                <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+              </label>
+              <label for="comentarios">
+                <input type="checkbox" id="comentarios" name="intereses" value="comentarios"> Comentarios
+              </label>
+              <label for="otros">
+                <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+              </label>
+            </div>
+          </div>
+          <div class="formcol2">
+            <label for="asunto">Asunto</label>
+              <textarea name="asunto" id="asunto" cols="30" rows="7"></textarea> <!-- caja de texto con tamaño en columnas y filas para que user diligencie -->
+            <input type="submit" value="Enviar" class="button"/> <!-- type=submit por defecto pone el value enviar en español/ingles segun el idioma del Sistema Operarivo. Para forzar que salga Enviar independiente del idioma del SO, ponemos el Value=Enviar).--> 
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

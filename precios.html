@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Precios de tus mejores guitarras!!</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/invie.css"/>
+  </head>
+  <body>
+    <header id="header" class="header background"> <!-- header -->
+      <div class="contenedor">
+        <figure class="logotipo"> <!-- logotipo -->
+          <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+        </figure>
+        <nav class="menu"> <!-- menu -->
+          <ul>
+            <li>
+              <a href="index.html">Home</a> <!-- Este enlace nos lleva a la pagina llamada index.html (el home) -->
+            </li>
+            <li>
+              <a href="index.html#guitarras">Guitarras</a> <!-- Este link nos lleva al la seccion guitarras del home, llamada index.html#guitarras -->
+            </li>
+            <li>
+              <a href="precios.html">Precios</a>  <!-- este link nos carga la pagina precios.html -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="tabla">
+      <div class="contenedor"> <!-- para darle el ancho y el margen de la clase contenedor -->
+        <table> <!-- etiqueta para elaboracion de tablas -->
+          <thead> <!-- cabecera de la tabla -->
+            <tr> <!-- (trow) fila de la tabla -->
+              <th>Modelo</th> <!-- th celdas para la cabecera. negrilla y centrada -->
+              <th>Precio</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody> <!-- cuerpo de la tabla -->
+            <tr>
+              <td>Invie classic</td> <!-- td table division. celdas normales -->
+              <td>$ 100.000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+            <tr>
+              <td>Invie classic</td>
+              <td>$ 200.000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+            <tr>
+              <td>Invie classic</td>
+              <td>$ 300.000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer class="footer">
+      <!-- footer (pie de pagina) tiene dos div porque tiene dos columnas -->
+      <div class="contenedor">
+        <div class="contacto">
+          <img src="images/invie-white.png" alt="logotipo blanco"/> <!-- src="donde esta la imagen  (ruta desde donde esta nuestro proyecto)" alt="El texto alterno por si la imagen no carga" -->
+          <a href="tel: +573186009379"><strong>Telefono</strong><span> 3186009379</span></a> <!-- <a> <a/> etiqueta ancla con href y el vr tel: se le da permiso al soft de llamadas... llamar al numero que ponemos al darle click. Con la etiqueta <strong> damos un bold a el titulo "Telefono" y con la etiqueta <span> para darle otro tipo de diseño -->
+          <a href="mailto: contacto@inviee.com"><strong>E-mail</strong><span> contacto@inviee.com</span></a>  <!-- Pasa lo mismo que la etiqueta ancla <a> anterior de telefono pero activa el cliente de correo con mailto -->
+        </div>
+        <form class="formulario">  <!-- <form> etiqueta especial para formulario con class para diñero en css-->
+          <div class="formcol1">            
+            <label for="nombre">Nombre</label>
+              <input type="text" required id="nombre" name="nombre" /> <!-- Atributos de etiq input: Type ( tipo texto, email, etc); required (para asegurar que halla texto segun el tipo); placeholder (placeholder="pon tu nombre": para texto de fondo o difuminado dentro de la caja de txt); value (la caja de txt con valores por defecto); id (para enlazar con el atributo for de label y al dar click en nombre me ponga focus en su respectiva caja de txt).-->
+            <label for="email">E-mail</label>
+              <input type="email" required id="email" name="email" /> <!-- Type (ej. email); required (para asegurar que halla texto@dominio.com por ser tipo email); id (para el focus en la txtbox).-->
+            <div class="sexo"> <!-- para el diseño-->
+              <label for="mujer">
+                <input type="radio" checked id="mujer" name="sexo" value="mujer">mujer <!-- type="radio" (ej. rara seleccion unica); id (para enlazar el click sobre el label for="mujer" con el input y poner el focus en la txtbox); name (para identificar que campo de formulario se envia al backend y con que valor); value (para que el valor enviado al Backend sea mujer).-->
+              </label>
+              <label for="hombre">
+                <input type="radio" id="hombre" name="sexo" value="hombre">hombre <!-- name (con el anterior se envia hombre o mujer segun seleccion); value (para que el valor enviado al Backend sea hombre).--> 
+              </label>
+            </div>
+            <div class="intereses">
+              <label for="cotizacion">
+                <input type="checkbox" id="cotizacion" name="intereses" checked value="cotizacion"> Cotización <!--value (Vr enviado al Backend sea cotizacion...).--> 
+              </label>
+              <label for="reclamos">
+                <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+              </label>
+              <label for="comentarios">
+                <input type="checkbox" id="comentarios" name="intereses" value="comentarios"> Comentarios
+              </label>
+              <label for="otros">
+                <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+              </label>
+            </div>
+          </div>
+          <div class="formcol2">
+            <label for="asunto">Asunto</label>
+              <textarea name="asunto" id="asunto" cols="30" rows="7"></textarea> <!-- caja de texto con tamaño en columnas y filas para que user diligencie -->
+            <input type="submit" value="Enviar" class="button"/> <!-- type=submit por defecto pone el value enviar en español/ingles segun el idioma del Sistema Operarivo. Para forzar que salga Enviar independiente del idioma del SO, ponemos el Value=Enviar).--> 
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
